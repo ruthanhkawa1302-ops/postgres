@@ -1,0 +1,21 @@
+đây là yêu cầu dự an của tôi Use case 1: bạn nhìn ảnh nhé usecase1.png nhe
+Nôm na là tôi cần dựng database postgres standalone trên Ubuntu 24.04 chủ yếu là dùng để demo cho việc nâng update minor
+version
+Ok bây giờ yêu cầu sẽ là như sau:
++ Thứ nhất thay version là 16.2 > 16.3 , không còn là 16.1 > 16.2 nữa
+
++ Cài đặt postgres dùng apt 16.2 postgresql-16 | 16.2-2.pgdg24.04+1 | https://apt-archive.postgresql.org/pub/repos/apt noble-pgdg-archive/main amd64 Packages > Viet lai thanh 1 script
+
++ Tạo cho tôi các bảng dữ liệu , bạn muốn tạo như nào cũng được, có liên kết với nhau,
+có dùng key , index > Viết lại thành 1 file script sql và cho tôi 1 file docs riêng ghi ra đã tạo những gì
+
++ Tạo cho tôi script SQL để insert các dữ liệu vào trong các bảng đó, dữ liệu sài tiếng Anh, và phù hợp với index
+bạn đã tạo > Viết thành 1 file script sql riêng , dữ liệu tầm 7-8 GB tổng cộng nhé
+
++ cài đặt các extension cần thiết , phổ biến (mục đích là để query , xử lí dữ liệu) > Viết lại 1 file docs riêng
+về các extension đã cài và dùng làm gì, dùng cho cái gì, 1 file script để cài đặt các thành phần này
+
++ Sau khi có dữ liệu xong tạo ra cho tôi 1 các function, procedure ,view,... nói chung là đầy đủ các thành phần của database > Nhớ viết lại script sql , 1 file docs riêng các thành phần bạn đã tạo những gì, í nghĩa, và sử dụng extenstion gì trong các hàm đó.
+
++ cho tôi 1 file .md để chứa các câu lệnh truy vấn tất cả thành phần bên trên để đảm bảo rằng mọi thứ chạy trơn tru trước khi update và sau khi update minor version có các câu lệnh gì để verify lại xem tất cả các thành phần
+đều chạy tốt từ index đến extension, dữ liệu, ....
