@@ -1,0 +1,171 @@
+1. Opening
+
+Hi everyone. Thanks for joining us today.
+
+I'd like to walk you through our AI application for automated database patching.
+
+It's a web-based application, which means you can access it directly through your web browser without installing any additional software
+Let's take a look at how it works.
+
+2. Dashboard
+
+[Log in and land on the Dashboard]
+
+Once you log in, you'll be taken to the Dashboard.
+
+Our application is built around a ticket-based workflow. This means that whenever you want to patch a database, you simply create a ticket first.
+
+On the Dashboard, you can see two main things:
+
+First, the list of patching tickets that are waiting for DBA review.
+
+Second, the database instances that are available for an upgrade to a newer version.
+
+This gives DBAs a centralized place to track their tickets and manage their database patching activities.
+
+3. Ticket Page
+
+Now, let's move on to the Ticket page.
+
+For each ticket, you can view its history result, including its current status and final outcome.
+
+At the moment, our application supports PostgreSQL. However, we're planning to extend support to other database systems in the future as well
+
+4. Creating a New Ticket
+
+Now i will create new patching ticket
+
+[Click "New Ticket"]
+
+I'll select the database instance that I want to patch.
+
+Then, I'll pick the target version is 16.5
+
+Next, I need to decide when the patching process should take place.
+
+There are two options available:
+
+The first option is to start patching immediately.
+
+The second option is to schedule it during a specific maintenance window.
+
+For this demo, I'll choose the immediate option.
+
+5. Preparation Phase
+
+[Start AI Preparation]
+
+Once the ticket is created, we can move on to the Preparation phase.
+
+Our patching workflow consists of two main phases: Preparation and Execution.
+
+During the Preparation phase, AI collects information from the target database server and analyzes the official PostgreSQL release notes.
+
+It then combines these two sources of information to generate a patching plan that appropriate with the database server. After that DBA must review and confirm the patching plan is good to go. When DBA approve it, it will go to the second phase is Execution phase.
+
+Another useful feature is that the DBA can review exactly what the AI has done.
+
+You can simply click on any step to see more details about the actions performed and the information collected.
+
+[Click a step to show details]
+
+This process takes some time to complete, so rather than waiting for it to finish during the demo, I'll show you a pre-recorded video to save some time.
+
+[Play the recorded video – fast-forward to around 3:00]
+
+6. Change Request
+
+Once the preparation process is complete, the AI automatically generates a Change Request for the DBA to review and approve.
+
+
+You can see the main contents on left hand side
+
+First, Summary.
+
+This provides an overview of the planned changes.
+
+Next, Reason for Change.
+
+This explains why we need to perform the update. In this case, the goal is to fix a CVE.
+
+Then, Pre-checks.
+
+These are the checks the AI perform to make sure the database server is ready for the upgrade.
+
+Next, Procedure.
+
+This section list all the steps that will be executed during the Execution phase.
+
+For example, the process includes backing up the database, backing up the current packages, putting the server into maintenance mode, and then performing the patching operation.
+
+AI also generated add-on scripts base on PostgreSQL release note. 
+These scripts are created to fix issues on the next version after the upgrade.
+The DBA can review these scripts and decide whether to approve or reject them.
+If you approve these , then you can see the status in the list here, and you can also modify the scripts in the last section.
+
+Release Coverage provides an overview of what's included in the new PostgreSQL version.
+
+Risks and Mitigation : How risk to update and how to mitigate them
+
+Backup and Rollback explains our backup strategy and how we can recover the system if something goes wrong during the upgrade.
+
+Verification Steps defines how we verify that the database is working properly after the patching process.
+
+DBA confirmation
+
+Finally, we have Appendix A, which contains the actual scripts that the AI will execute on the database server.
+
+The DBA can review these scripts and make any necessary modifications to make sure they're suitable for the actual environment.
+
+Once everything has been reviewed and approved, we can move on to the Execution phase.
+
+7. Execution Phase
+
+
+Now, let's move on to the Execution phase.
+
+In this phase, the AI automatically executes the scripts that were defined and approved during the Preparation phase.
+
+Let me walk you through the main steps.
+
+First, the AI checks the current status of the database server to make sure everything is ready.
+
+Next, it performs the necessary backups, including the database, configuration files, and current software packages. These backups are essential in case we need to roll back the upgrade.
+
+After that, the AI downloads the target version and starts the database upgrade process.
+
+Once the upgrade is complete, the AI performs post-checks to verify the database status.
+
+It then executes the add-on scripts that were previously reviewed and approved by the DBA.
+
+Once all the steps are completed successfully, the ticket is automatically closed.
+
+The Execution phase will run in about 10 minutes, and since we have limited time for this meeting, I'd like to open another ticket that has already been executed so we can review the final steps of the database patching process.
+
+8. Final Report
+
+After the ticket is closed, the AI automatically generates a final report. We also provide a Force Rollback button, which allows DBAs to manually trigger a rollback whenever necessary.
+
+The report provides a complete overview of the patching process, including:
+
+The overall result of the ticket.
+
+A detailed execution history, showing every step performed and its corresponding result.
+
+The actual database downtime during the patching process.
+
+Database before and after the patching
+
+And finally, the cost of using the AI for this operation.
+
+This allows DBAs to review the entire process and evaluate the results without having to manually collect information from different sources.
+
+9. Closing
+
+And that's the main workflow of our AI-powered database patching application, from creating a ticket to generating the final report.
+
+Beside that, we also provide a features to help DBAs evaluate available database versions and choose the most appropriate target version for their environment.
+
+And also in the database inventory tab here,  this is place where DBA can manage all the database instances, it has some basic informations about database server and you can also remote access to a database by through ssh protocol
+
+Thank you for listning
