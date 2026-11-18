@@ -61,17 +61,15 @@ Our patching workflow consists of two main phases: Preparation and Execution.
 
 During the Preparation phase, AI collects information from the target database server and analyzes the official PostgreSQL release notes.
 
-It then combines these two sources of information to generate a patching plan that appropriate with the database server. After that DBA must review and confirm the patching plan is good to go. When DBA approve it, it will go to the second phase is Execution phase.
+It then combines these two sources of information to generate a patching plan that appropriate with the database server. After that DBA must review and confirm the patching plan is good to go. When DBA approve it, it will go to the second phase is Execution
 
 Another useful feature is that the DBA can review exactly what the AI has done.
 
 You can simply click on any step to see more details about the actions performed and the information collected.
 
+Down below are the steps that are being run by AI now,
+You can see what is AI doing behind the scene by click on a specific steps
 [Click a step to show details]
-
-This process takes some time to complete, so rather than waiting for it to finish during the demo, I'll show you a pre-recorded video to save some time.
-
-[Play the recorded video – fast-forward to around 3:00]
 
 6. Change Request
 
