@@ -1,6 +1,6 @@
 1. Opening
 
-Hi everyone. Thanks for joining us today.
+Hi everyone. Thanks for being here today.
 
 I'd like to walk you through our AI application for automated database patching.
 
@@ -21,13 +21,14 @@ First, the list of patching tickets that are waiting for DBA review.
 
 Second, the database instances that are available for an upgrade to a newer version.
 
-This gives DBAs a centralized place to track their tickets and manage their database patching activities.
+This gives DBAs a centralized place to monitor their tickets and manage their database patching activities.
 
 3. Ticket Page
 
-Now, let's move on to the Ticket page.
+For now I will focus on database patching process
+Open the Ticket page here
 
-For each ticket, you can view its history result, including its current status and final outcome.
+In here, you can view ticket history, including final result and status of each ticket.
 
 At the moment, our application supports PostgreSQL. However, we're planning to extend support to other database systems in the future as well
 
@@ -128,7 +129,7 @@ Let me walk you through the main steps.
 
 First, the AI checks the current status of the database server to make sure everything is ready.
 
-Next, it performs the necessary backups, including the database, configuration files, and current software packages. These backups are essential in case we need to roll back the upgrade.
+Next, it performs the necessary backups, including the database, configuration files, and current software packages. These backups are needed in case we have to roll back the upgrade.
 
 After that, the AI downloads the target version and starts the database upgrade process.
 
@@ -167,3 +168,7 @@ Beside that, we also provide a features to help DBAs evaluate available database
 And also in the database inventory tab here,  this is place where DBA can manage all the database instances, it has some basic informations about database server and you can also remote access to a database by through ssh protocol
 
 Thank you for listning
+
+
+
+
